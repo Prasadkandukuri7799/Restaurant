@@ -1,0 +1,32 @@
+<app-not-found [visible]=" !cart ||cart.items.length >=0"
+notFoundMessage="Your order is odered !"
+resetLinkText="Go to Homepage"></app-not-found>
+<div *ngIf="cart && cart.items.length > 0" class="container">
+    <ul>
+        <li *ngFor="let cartItem of cart.items">
+            <div>
+              <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
+            </div>
+            <div>
+                <a routerLink="/food/{{cartItem.food.id}}">
+                  {{cartItem.food.name}}
+                </a>
+            </div>
+              
+              <div>
+                   <span>
+                   $ {{cartItem.price}}
+                  </span>
+              </div>
+              <div>
+               
+              </div>
+            
+        </li>
+    </ul>
+</div>
+<div>
+    <h3>
+        <p style="text-align:center;color: black;"><b>Thankyou visit again🙂</b></p>
+        </h3>
+</div>

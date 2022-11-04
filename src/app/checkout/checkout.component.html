@@ -1,0 +1,44 @@
+<app-not-found [visible]=" !cart ||cart.items.length <=0"
+notFoundMessage="Item not Found!"
+resetLinkText="Go to Homepage"></app-not-found>
+
+
+<div *ngIf="cart && cart.items.length > 0" class="container">
+<ul>
+    <li *ngFor="let cartItem of cart.items">
+        <div>
+          <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
+        </div>
+        <div>
+            <a routerLink="/food/{{cartItem.food.id}}">
+              {{cartItem.food.name}}
+            </a>
+        </div>
+          
+          <div>
+               <span>
+               $ {{cartItem.price}}
+              </span>
+            
+          </div>
+         
+        
+    </li>
+    <form action="/action_page.php" id="usrform">
+      Name: <input type="text" name="usrname">
+    
+    </form>
+    <br>
+    <textarea rows="4" cols="50" name="comment" form="usrform">
+    Enter Address here...</textarea>
+    
+</ul>
+<div class="checkout">
+  <div>
+    <div class="foods-count">{{cart.items.length}}</div>
+    <div class="total-price">{{cart.totalPrice|currency}}</div>
+ 
+
+  <a routerLink="/order-page">order</a>
+</div>
+</div>

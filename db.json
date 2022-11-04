@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signupUsers": [
+    {
+      "id": 1,
+      "fullname": "Ramvaraprasad",
+      "email": "Ram123@gmail.com",
+      "mobile": "9000487739"
+    },
+    {
+      "id": 2,
+      "fullname": "vara",
+      "email": "vara@gmail.com",
+      "mobile": "9876545678"
+    },
+    {
+      "id": 3,
+      "fullname": "Prasad",
+      "email": "prasad@gmail.com",
+      "mobile": "9876543212"
+    },
+    {
+      "fullname": "",
+      "email": "",
+      "password": "",
+      "mobile": "",
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
